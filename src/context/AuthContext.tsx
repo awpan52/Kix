@@ -15,6 +15,7 @@ interface UserProfile {
   email: string | null;
   displayName: string | null;
   createdAt?: string;
+  role?: 'admin' | 'user';
 }
 
 interface AuthContextType {
@@ -22,6 +23,7 @@ interface AuthContextType {
   userProfile: UserProfile | null;
   loading: boolean;
   error: string | null;
+  isAdmin: boolean;
   login: (email: string, password: string) => Promise<void>;
   signup: (email: string, password: string, displayName: string) => Promise<void>;
   logout: () => Promise<void>;
@@ -133,6 +135,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const clearError = () => setError(null);
 
+  // Check if current user is an admin
+  const isAdmin = userProfile?.role === 'admin';
+
   return (
     <AuthContext.Provider
       value={{
@@ -140,6 +145,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         userProfile,
         loading,
         error,
+        isAdmin,
         login,
         signup,
         logout,

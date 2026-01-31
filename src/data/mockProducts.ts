@@ -52,7 +52,7 @@ export const mockProducts: Product[] = [
     imageUrl: airMax90,
     images: [airMax90, airMax90, airMax90],
     rating: 5,
-    reviewCount: 88,
+    reviewCount: 67,
     reviews: generateReviews(5, 5),
     isNewArrival: true,
     isTrending: false,
@@ -78,7 +78,7 @@ export const mockProducts: Product[] = [
     imageUrl: cosmicUnity,
     images: [cosmicUnity, cosmicUnity, cosmicUnity],
     rating: 5,
-    reviewCount: 88,
+    reviewCount: 94,
     reviews: generateReviews(5, 5),
     isNewArrival: true,
     isTrending: false,
@@ -104,7 +104,7 @@ export const mockProducts: Product[] = [
     imageUrl: maroon,
     images: [maroon, maroon, maroon],
     rating: 4,
-    reviewCount: 88,
+    reviewCount: 43,
     reviews: generateReviews(4, 4),
     isNewArrival: true,
     isTrending: false,
@@ -130,7 +130,7 @@ export const mockProducts: Product[] = [
     imageUrl: airZoomPegasus,
     images: [airZoomPegasus, airZoomPegasus, airZoomPegasus],
     rating: 4,
-    reviewCount: 75,
+    reviewCount: 56,
     reviews: generateReviews(5, 4),
     isNewArrival: true,
     isTrending: true,
@@ -154,7 +154,7 @@ export const mockProducts: Product[] = [
     imageUrl: airMax90,
     images: [airMax90, airMax90, airMax90],
     rating: 4,
-    reviewCount: 96,
+    reviewCount: 78,
     reviews: generateReviews(5, 4),
     isNewArrival: true,
     isTrending: false,
@@ -180,7 +180,7 @@ export const mockProducts: Product[] = [
     imageUrl: cosmicUnity,
     images: [cosmicUnity, cosmicUnity, cosmicUnity],
     rating: 5,
-    reviewCount: 75,
+    reviewCount: 51,
     reviews: generateReviews(5, 5),
     isNewArrival: true,
     isTrending: true,
@@ -203,7 +203,7 @@ export const mockProducts: Product[] = [
     imageUrl: maroon,
     images: [maroon, maroon, maroon],
     rating: 4,
-    reviewCount: 88,
+    reviewCount: 29,
     reviews: generateReviews(4, 4),
     isNewArrival: true,
     isTrending: false,
@@ -229,7 +229,7 @@ export const mockProducts: Product[] = [
     imageUrl: airZoomPegasus,
     images: [airZoomPegasus, airZoomPegasus, airZoomPegasus],
     rating: 4,
-    reviewCount: 75,
+    reviewCount: 38,
     reviews: generateReviews(5, 4),
     isNewArrival: true,
     isTrending: true,
@@ -253,7 +253,7 @@ export const mockProducts: Product[] = [
     imageUrl: airMax90,
     images: [airMax90, airMax90, airMax90],
     rating: 5,
-    reviewCount: 88,
+    reviewCount: 127,
     reviews: generateReviews(5, 5),
     isNewArrival: false,
     isTrending: true,
@@ -279,7 +279,7 @@ export const mockProducts: Product[] = [
     imageUrl: cosmicUnity,
     images: [cosmicUnity, cosmicUnity, cosmicUnity],
     rating: 5,
-    reviewCount: 88,
+    reviewCount: 89,
     reviews: generateReviews(5, 5),
     isNewArrival: false,
     isTrending: true,
@@ -302,7 +302,7 @@ export const mockProducts: Product[] = [
     imageUrl: maroon,
     images: [maroon, maroon, maroon],
     rating: 4,
-    reviewCount: 88,
+    reviewCount: 34,
     reviews: generateReviews(4, 4),
     isNewArrival: false,
     isTrending: true,
@@ -328,7 +328,7 @@ export const mockProducts: Product[] = [
     imageUrl: airZoomPegasus,
     images: [airZoomPegasus, airZoomPegasus, airZoomPegasus],
     rating: 4,
-    reviewCount: 75,
+    reviewCount: 47,
     reviews: generateReviews(5, 4),
     isNewArrival: false,
     isTrending: true,
@@ -352,7 +352,7 @@ export const mockProducts: Product[] = [
     imageUrl: airMax90,
     images: [airMax90, airMax90, airMax90],
     rating: 4,
-    reviewCount: 96,
+    reviewCount: 63,
     reviews: generateReviews(5, 4),
     isNewArrival: false,
     isTrending: true,
@@ -378,7 +378,7 @@ export const mockProducts: Product[] = [
     imageUrl: cosmicUnity,
     images: [cosmicUnity, cosmicUnity, cosmicUnity],
     rating: 5,
-    reviewCount: 75,
+    reviewCount: 22,
     reviews: generateReviews(5, 5),
     isNewArrival: false,
     isTrending: true,
@@ -401,7 +401,7 @@ export const mockProducts: Product[] = [
     imageUrl: maroon,
     images: [maroon, maroon, maroon],
     rating: 4,
-    reviewCount: 88,
+    reviewCount: 31,
     reviews: generateReviews(4, 4),
     isNewArrival: false,
     isTrending: true,
@@ -427,7 +427,7 @@ export const mockProducts: Product[] = [
     imageUrl: airZoomPegasus,
     images: [airZoomPegasus, airZoomPegasus, airZoomPegasus],
     rating: 4,
-    reviewCount: 75,
+    reviewCount: 18,
     reviews: generateReviews(5, 4),
     isNewArrival: false,
     isTrending: true,
@@ -451,7 +451,7 @@ export const mockProducts: Product[] = [
     imageUrl: airMax90,
     images: [airMax90, airMax90, airMax90],
     rating: 4,
-    reviewCount: 62,
+    reviewCount: 52,
     reviews: generateReviews(4, 4),
     isNewArrival: false,
     isTrending: false,
@@ -474,7 +474,7 @@ export const mockProducts: Product[] = [
     imageUrl: cosmicUnity,
     images: [cosmicUnity, cosmicUnity, cosmicUnity],
     rating: 5,
-    reviewCount: 112,
+    reviewCount: 156,
     reviews: generateReviews(5, 5),
     isNewArrival: false,
     isTrending: false,
@@ -497,7 +497,7 @@ export const mockProducts: Product[] = [
     imageUrl: maroon,
     images: [maroon, maroon, maroon],
     rating: 4,
-    reviewCount: 45,
+    reviewCount: 24,
     reviews: generateReviews(4, 4),
     isNewArrival: false,
     isTrending: false,
@@ -540,8 +540,36 @@ export const getNewArrivals = (): Product[] => {
   return mockProducts.filter(product => product.isNewArrival).slice(0, 8);
 };
 
+/**
+ * Get trending products sorted by reviewCount (highest first)
+ * Uses rating as tiebreaker when reviewCount is equal
+ * Returns top 3 most-reviewed products
+ */
 export const getTrending = (): Product[] => {
-  return mockProducts.filter(product => product.isTrending).slice(0, 8);
+  // Sort all products by reviewCount (descending), then by rating (descending) as tiebreaker
+  const sorted = [...mockProducts].sort((a, b) => {
+    // Primary sort: reviewCount (highest first)
+    if (b.reviewCount !== a.reviewCount) {
+      return b.reviewCount - a.reviewCount;
+    }
+    // Tiebreaker: rating (highest first)
+    return b.rating - a.rating;
+  });
+  
+  // Return top 3 most-reviewed products
+  return sorted.slice(0, 3);
+};
+
+/**
+ * Get trending products with their ranking position
+ * Returns array of products with additional 'trendingRank' property
+ */
+export const getTrendingWithRank = (): (Product & { trendingRank: number })[] => {
+  const trending = getTrending();
+  return trending.map((product, index) => ({
+    ...product,
+    trendingRank: index + 1,
+  }));
 };
 
 export const getProductsByCategory = (category: string): Product[] => {

@@ -14,3 +14,4 @@ export { default as Orders } from './Orders';
 export { default as OrderDetail } from './OrderDetail';
 export { default as PaymentSuccess } from './PaymentSuccess';
 export { default as Sale } from './Sale';
+export { default as Admin } from './Admin';

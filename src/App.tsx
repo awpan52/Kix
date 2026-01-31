@@ -17,7 +17,8 @@ import {
   Orders,
   OrderDetail,
   PaymentSuccess,
-  Sale
+  Sale,
+  Admin
 } from './pages';
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
             <Route path="/orders/:orderId" element={<OrderDetail />} />
             <Route path="/payment-success" element={<PaymentSuccess />} />
             <Route path="/sale" element={<Sale />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </main>
         {!isAuthPage && <Footer />}

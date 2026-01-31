@@ -8,9 +8,10 @@ import heartedIcon from '../../assets/icons/hearted.svg';
 
 interface ProductCardProps {
   product: Product;
+  trendingRank?: number; // 1, 2, or 3 for top trending products
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, trendingRank }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const { isFavorite, toggleFavorite } = useFavorites();
   const { getAverageRating, getReviewCount } = useReviews();
@@ -47,10 +48,24 @@ const ProductCard = ({ product }: ProductCardProps) => {
             src={product.imageUrl}
             alt={product.name}
             className="w-full h-full object-contain p-6"
+            onError={(e) => {
+              console.error(`[ProductCard] Failed to load image for ${product.name}:`, product.imageUrl);
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
           />
 
+          {/* Trending Rank Badge */}
+          {trendingRank && (
+            <div className="absolute top-3 left-3 z-10">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-cabinet font-bold px-2.5 py-1 rounded flex items-center gap-1 shadow-md">
+                <span className="text-base leading-none">🔥</span>
+                <span>#{trendingRank} Trending</span>
+              </span>
+            </div>
+          )}
+
           {/* Sale/Discount Badge */}
-          {product.onSale ? (
+          {!trendingRank && product.onSale ? (
             <div className="absolute top-3 left-3 flex flex-col gap-1">
               <span className="bg-discount-red text-white text-xs font-cabinet font-bold px-2.5 py-1 rounded">
                 SALE
@@ -61,7 +76,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 </span>
               )}
             </div>
-          ) : product.discountPercent ? (
+          ) : !trendingRank && product.discountPercent ? (
             <span className="absolute top-3 left-3 bg-discount-red text-white text-xs font-medium px-3 py-1.5 rounded">
               -{product.discountPercent}%
             </span>

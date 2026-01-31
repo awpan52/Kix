@@ -3,9 +3,21 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     
+    // Helper function to check if user is admin
+    function isAdmin() {
+      return request.auth != null && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
     // Users collection - users can read/write their own documents
     match /users/{userId} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Products collection - anyone can read, only admin can write
+    match /products/{productId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
     }
     
     // Orders collection - users can create and update their own orders
@@ -28,10 +40,15 @@ service cloud.firestore {
       allow read, write: if request.auth != null && request.auth.uid == userId;
     }
     
-    // Promo codes - allow read for anyone authenticated
+    // Favorites collection - users can read/write their own favorites
+    match /favorites/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Promo codes - allow read for anyone authenticated, admin can write
     match /promoCodes/{code} {
       allow read: if request.auth != null;
-      allow write: if false; // Only admin can create promo codes
+      allow write: if isAdmin();
     }
     
     // Reviews collection - authenticated users can create, read all
