@@ -1,0 +1,44 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Users collection - users can read/write their own documents
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Orders collection - users can create and update their own orders
+    match /orders/{orderId} {
+      // Allow read if the user owns the order
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      
+      // Allow create if authenticated and setting their own userId
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      
+      // Allow update if the user owns the order
+      allow update: if request.auth != null && resource.data.userId == request.auth.uid;
+      
+      // Don't allow delete
+      allow delete: if false;
+    }
+    
+    // Carts collection - users can read/write their own cart
+    match /carts/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Promo codes - allow read for anyone authenticated
+    match /promoCodes/{code} {
+      allow read: if request.auth != null;
+      allow write: if false; // Only admin can create promo codes
+    }
+    
+    // Reviews collection - authenticated users can create, read all
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+  }
+}

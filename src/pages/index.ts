@@ -1,0 +1,16 @@
+export { default as Home } from './Home';
+export { default as MensShoes } from './MensShoes';
+export { default as WomensShoes } from './WomensShoes';
+export { default as KidsShoes } from './KidsShoes';
+export { default as Profile } from './Profile';
+export { default as ProductDetail } from './ProductDetail';
+export { default as Cart } from './Cart';
+export { default as Favorites } from './Favorites';
+export { default as Login } from './Login';
+export { default as Signup } from './Signup';
+export { default as Checkout } from './Checkout';
+export { default as OrderConfirmation } from './OrderConfirmation';
+export { default as Orders } from './Orders';
+export { default as OrderDetail } from './OrderDetail';
+export { default as PaymentSuccess } from './PaymentSuccess';
+export { default as Sale } from './Sale';
